@@ -19,7 +19,7 @@ if [[ $# -lt 2 ]] ; then
     exit 1
 fi
 
-cd "/home/devops/docker_cicd"
+cd "/home/devops/docker_cicd_v1.0"
 
 git pull origin master
 
