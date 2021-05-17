@@ -8,5 +8,4 @@ node {
         stage("Post 1") {
             echo "Mail Sent Successful"
         }
-    }
 }
