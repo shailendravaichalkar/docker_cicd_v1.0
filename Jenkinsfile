@@ -5,7 +5,7 @@ node {
         stage("Deploy") {
             echo "Mail Sent Successful"
         }
-        stage("Post 3") {
+        stage("Post 7") {
             echo "Mail Sent Successful .. "
         }
 }
