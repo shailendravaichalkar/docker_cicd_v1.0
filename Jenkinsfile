@@ -15,7 +15,7 @@ node {
             sshCommand remote: remote, command: "id"
             sshCommand remote: remote, command: "pwd"
         }
-        stage("Post 1") {
+        stage("Post 2") {
             echo "Mail Sent Successful"
         }
     }
