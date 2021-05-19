@@ -1,9 +1,8 @@
 #!/bin/sh
 ########################################
-# Put this on a Server
-# run chmod +x deploy_app.sh to make the script executable
-# 
-# Execute this script:  ./deploy_app.sh ariv3ra/python-circleci-docker:$TAG
+# Author: Shailendra Vaichalkar
+#
+# Execute this script:  ./deploy_docker.sh <DOCKER_IMAGE>
 # Replace the $TAG with the actual Build Tag you want to deploy
 #
 ########################################
@@ -12,6 +11,7 @@ set -e
 
 DOCKER_IMAGE=$1
 CONTAINER_NAME="html-docker-demo-poc"
+LOCATION="/home/devops/docker_cicd_v1.0"
 CERT_PORT="8081:80"
 PROD_PORT="8082:80"
 
@@ -22,7 +22,8 @@ if [[ $# -lt 1 ]] ; then
     exit 1
 fi
 
-cd "/home/devops/docker_cicd_v1.0"
+#Change the working location
+cd "$LOCATION"
 
 echo "Deploying $CONTAINER_NAME to Docker Container"
 
